@@ -43,6 +43,10 @@ nav a {
   margin-top: 1em;
 }
 
+.overview {
+  padding: 01em; /* adds space on left and right */
+}
+
 footer {
   background: #ddc4d2;
   color: black;
