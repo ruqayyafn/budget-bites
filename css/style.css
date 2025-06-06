@@ -53,3 +53,29 @@ footer {
   text-align: center;
   padding: 1em;
 }
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 1.5em;
+  padding: 2em;
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 300px;         /* force a consistent height */
+  object-fit: cover;     /* crop without stretching */
+  display: block;
+}
+
+.recipe-card a {
+  text-decoration: none;     /* removes blue underline */
+  color: inherit;            /* keeps text same color as parent */
+  display: block;
+}
+
+.recipe-card h4 {
+  text-align: center;        /* centers the title */
+  margin: 0.5em 0 1em;
+  color: #333;
+}
