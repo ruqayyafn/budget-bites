@@ -47,6 +47,25 @@ nav a {
   padding: 01em; /* adds space on left and right */
 }
 
+.contact-form {
+  display: flex;
+  justify-content: center;
+}
+
+.submit-wrapper {
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: -10;
+}
+
+label {
+  display: inline-block;
+  vertical-align: top;
+}
+
 footer {
   background: #ddc4d2;
   color: black;
