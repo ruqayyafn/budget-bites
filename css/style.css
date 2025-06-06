@@ -1,3 +1,4 @@
+/* css/style.css */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -42,7 +43,7 @@ nav a {
 }
 
 .overview {
-  padding: 01em;
+  padding: 01em; /* adds space on left and right */
 }
 
 footer {
