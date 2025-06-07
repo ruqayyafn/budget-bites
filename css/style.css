@@ -64,8 +64,9 @@ nav a {
 label {
   display: inline-block;
   vertical-align: top;
+}
 
-  .centered-image img {
+.centered-image img {
   max-width: 70%;
   height: auto;
   display: block;
