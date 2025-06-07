@@ -106,3 +106,18 @@ footer {
   margin: 0.5em 0 1em;
   color: #333;
 }
+
+form {
+  max-width: 600px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+form div {
+  margin-bottom: 1em;
+}
+
+input, textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
