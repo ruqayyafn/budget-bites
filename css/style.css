@@ -74,6 +74,11 @@ label {
   border-radius: 10px;
 }
 
+.tip-of-the-day {
+  background-color: #f9f1f8;
+  padding-bottom: 100
+}
+
 footer {
   background: #ddc4d2;
   color: black;
