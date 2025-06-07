@@ -70,7 +70,11 @@ footer {
 
 .upload-form {
   display: grid;
-  gap: 1em;
+  gap: 4px;
+}
+
+.upload-form .form-field:last-child {
+  text-align: center;
 }
 
 .upload-form label {
