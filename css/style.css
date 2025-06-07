@@ -47,7 +47,25 @@ nav a {
   padding: 01em; /* adds space on left and right */
 }
 
-.centered-image img {
+.contact-form {
+  display: flex;
+  justify-content: center;
+}
+
+.submit-wrapper {
+  text-align: center;
+}
+
+.centered-h1 {
+  text-align: center;
+  margin-bottom: -10;
+}
+
+label {
+  display: inline-block;
+  vertical-align: top;
+
+  .centered-image img {
   max-width: 70%;
   height: auto;
   display: block;
