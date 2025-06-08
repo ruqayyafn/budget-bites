@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Budget Bites | Meal Planner</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <h1>Budget Bites</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipe_gallery.html">Recipes</a></li>
+        <li><a href="upload.html">Upload</a></li>
+        <li><a href="meal_planner.html">Meal Planner</a></li>
+        <li><a href="tips.html">Tips</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Plan Your Meals for the Week</h2>
+      <p>Fill in your meals below and click "Email Plan". Replace <code>you@example.com</code> with your address to save the plan via email.</p>
+    </section>
+
+    <form class="planner-form" action="mailto:you@example.com" method="post" enctype="text/plain">
+      <div class="planner-grid">
+        <div class="day">
+          <h4>Monday</h4>
+          <input type="text" name="monday_breakfast" placeholder="Breakfast">
+          <input type="text" name="monday_lunch" placeholder="Lunch">
+          <input type="text" name="monday_dinner" placeholder="Dinner">
+        </div>
+        <div class="day">
+          <h4>Tuesday</h4>
+          <input type="text" name="tuesday_breakfast" placeholder="Breakfast">
+          <input type="text" name="tuesday_lunch" placeholder="Lunch">
+          <input type="text" name="tuesday_dinner" placeholder="Dinner">
+        </div>
+        <div class="day">
+          <h4>Wednesday</h4>
+          <input type="text" name="wednesday_breakfast" placeholder="Breakfast">
+          <input type="text" name="wednesday_lunch" placeholder="Lunch">
+          <input type="text" name="wednesday_dinner" placeholder="Dinner">
+        </div>
+        <div class="day">
+          <h4>Thursday</h4>
+          <input type="text" name="thursday_breakfast" placeholder="Breakfast">
+          <input type="text" name="thursday_lunch" placeholder="Lunch">
+          <input type="text" name="thursday_dinner" placeholder="Dinner">
+        </div>
+        <div class="day">
+          <h4>Friday</h4>
+          <input type="text" name="friday_breakfast" placeholder="Breakfast">
+          <input type="text" name="friday_lunch" placeholder="Lunch">
+          <input type="text" name="friday_dinner" placeholder="Dinner">
+        </div>
+        <div class="day">
+          <h4>Saturday</h4>
+          <input type="text" name="saturday_breakfast" placeholder="Breakfast">
+          <input type="text" name="saturday_lunch" placeholder="Lunch">
+          <input type="text" name="saturday_dinner" placeholder="Dinner">
+        </div>
+        <div class="day">
+          <h4>Sunday</h4>
+          <input type="text" name="sunday_breakfast" placeholder="Breakfast">
+          <input type="text" name="sunday_lunch" placeholder="Lunch">
+          <input type="text" name="sunday_dinner" placeholder="Dinner">
+        </div>
+      </div>
+      <div class="controls">
+        <input type="submit" value="Email Plan">
+        <input type="reset" value="Clear Plan">
+      </div>
+    </form>
+</div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Budget Bites | Creators: Ruqayya, Muhammed, Justin, and Brianna</p>
+  </footer>
+</body>
+</html>
