@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Budget Bites | Upload Recipe</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
   <header>
     <div class="logo">
@@ -28,37 +30,44 @@
     <section class="upload-section">
       <h2>Share Your Recipe</h2>
       <form class="upload-form" action="#" method="post" enctype="multipart/form-data">
-
         <div class="form-field">
           <h3>Email</h3>
           <input type="email" id="user-email" name="user-email" placeholder="e.g., alex@example.com" required />
         </div>
-
         <div class="form-field">
           <h3>Your Name</h3>
           <input type="text" id="user-name" name="user-name" placeholder="e.g., Alex" required />
         </div>
-
         <div class="form-field">
           <h3>Recipe Title</h3>
           <input type="text" id="recipe-title" name="recipe-title" placeholder="e.g., Easy Pancakes" required />
         </div>
-
+        <div class="form-field">
+          <h3>Estimated Time</h3>
+          <input type="text" id="estimated-time" name="estimated-time"
+                 placeholder="e.g., 30 mins or 1 hour"
+                 pattern="^\d+\s*(mins?|hours?)$"
+                 title="Enter time like '30 mins' or '2 hours'" required />
+        </div>
+        <div class="form-field">
+          <h3>Estimated Cost</h3>
+          <input type="text" id="estimated-cost" name="estimated-cost"
+                 placeholder="e.g., $10.00"
+                 pattern="^\$\d+(\.\d{2})?$"
+                 title="Enter cost like '$10.00'" required />
+        </div>
         <div class="form-field">
           <h3>Recipe Image</h3>
           <input type="file" id="recipe-image" name="recipe-image" accept="image/*" required />
         </div>
-
         <div class="form-field">
           <h3>Ingredients</h3>
           <textarea id="ingredients" name="ingredients" rows="4" placeholder="Ingredients (one per line)" required></textarea>
         </div>
-
         <div class="form-field">
           <h3>Instructions</h3>
           <textarea id="instructions" name="instructions" rows="5" placeholder="Step-by-step instructions" required></textarea>
         </div>
-
         <div class="form-field">
           <button type="submit" class="submit-button">Upload Recipe</button>
         </div>
