@@ -28,24 +28,26 @@
     </header>
 
     <main>
-        <h1 class="centered-h1">Contact Us</h1>
-        <form class="contact-form" name="contactForm" id="contactForm">
-            <div>
-                <label for="fullName">Full Name</label>
-                <input type="text" id="fullName" name="fullName">
-            </div>
-            <div>
-                <label for="emailAddr">Email address</label>
-                <input type="email" id="emailAddr" name="emailAddr" pattern="[a-zA-Z0-9-_\.]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*" placeholder="name@domain.com">
-            </div>
-            <div>
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="7" cols="25"></textarea>
-            </div>
-            <div class="submit-wrapper">
-                <input type="submit" value="Submit">
-            </div>            
-        </form>
+        <section class="contact-form">
+            <h1 class="centered-h1">Contact Us</h1>
+            <form name="contactForm" id="contactForm">
+                <div>
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName">
+                </div>
+                <div>
+                    <label for="emailAddr">Email address</label>
+                    <input type="email" id="emailAddr" name="emailAddr" pattern="[a-zA-Z0-9-_\.]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*" placeholder="name@domain.com">
+                </div>
+                <div>
+                    <label for="message">Message</label>
+                    <textarea type="text area" id="message" name="message" rows="7" cols="25"></textarea>
+                </div>
+                <div class="submit-wrapper">
+                    <input type="submit" value="Submit">
+                </div>            
+            </form>
+        </section>
     </main>
 
     <footer>
