@@ -396,3 +396,37 @@ input, textarea {
 .controls input[type="reset"]:hover {
   background: #b25288;
 }
+.tip-of-the-day {
+  background-color: #f9f1f8;
+  padding-bottom: 100
+}
+
+.recipe-container {
+  max-width: 800px;
+  margin: 2em auto;
+  padding: 0 1em;
+}
+
+.recipe-meta {
+  font-style: italic;
+  color: #555;
+  margin: 1em 0;
+}
+
+.recipe-container ul,
+.recipe-container ol {
+  margin-left: 1.2em;
+}
+
+.recipe-container h3 {
+  color: #ce639e;
+  margin-top: 2em;
+}
+
+.recipe-img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 1em 0;
+}
