@@ -121,3 +121,8 @@ input, textarea {
   width: 100%;
   box-sizing: border-box;
 }
+
+.tip-of-the-day {
+  background-color: #f9f1f8;
+  padding-bottom: 100
+}
