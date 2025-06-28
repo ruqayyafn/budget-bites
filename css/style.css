@@ -47,15 +47,12 @@ nav a {
   padding: 01em; /* adds space on left and right */
 }
 
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .submit-wrapper {
   text-align: center;
+}
+
+input:hover {
+  background-color: #ddc4d2;
 }
 
 .centered-heading {
@@ -88,6 +85,11 @@ footer {
   max-width: 800px;
   margin: 2em auto;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 10px 10px 5px #b25288;
 }
 
 .upload-section h2 {
@@ -101,8 +103,9 @@ footer {
   gap: 4px;
 }
 
-.upload-form .form-field:last-child {
-  text-align: center;
+form div:last-child {
+  display: flex;
+  justify-content: center;
 }
 
 .upload-form label {
@@ -128,9 +131,7 @@ footer {
   border-radius: 6px;
   font-size: 1em;
   cursor: pointer;
-  justify-self: center;
-  margin-top: 2em;
-  transition: background 0.2s ease, transform 0.1s ease;
+  transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
 .submit-button:hover {
@@ -232,7 +233,7 @@ footer {
   cursor: pointer;
   justify-self: center;
   margin-top: 2em;    
-  transition: background 0.2s ease, transform 0.1s ease;
+  transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
 .submit-button:hover {
@@ -397,9 +398,14 @@ input, textarea {
 .controls input[type="reset"]:hover {
   background: #b25288;
 }
+
 .tip-of-the-day {
   background-color: #f9f1f8;
-  padding-bottom: 100
+  width: 90%;
+  padding-bottom: 100;
+  padding: 1.5em 2em;
+  margin: 2em auto;
+  box-shadow: 10px 10px 5px #b25288;
 }
 
 .recipe-container {
