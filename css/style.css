@@ -119,7 +119,7 @@ footer {
   padding: 1em;
 }
 
-.upload-section {
+.form-section {
   background: #f9f1f8;
   padding: 2em 1em;
   max-width: 800px;
@@ -132,7 +132,7 @@ footer {
   box-shadow: 10px 10px 5px #b25288;
 }
 
-.upload-section h2 {
+.form-section h2 {
   text-align: center;
   color: #ce639e;
   margin-bottom: 1em;
@@ -171,108 +171,6 @@ form div:last-child {
   border-radius: 6px;
   font-size: 1em;
   cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.1s ease;
-}
-
-.submit-button:hover {
-  background: #b25288;
-  transform: translateY(-1px);
-}
-
-.gallery-section {
-  padding: 2em 1em;
-  background: #ffffff;
-  max-width: 1000px;
-  margin: 2em auto;
-}
-
-.gallery-section h2 {
-  text-align: center;
-  color: #ce639e;
-  margin-bottom: 1.5em;
-}
-
-.recipe-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1.5em;
-}
-
-.gallery-item {
-  border: 1px solid #e0d4dd;
-  border-radius: 8px;
-  overflow: hidden;
-  background: #fafafa;
-  text-align: center;
-  padding-bottom: 0.5em;
-}
-
-.gallery-item img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-}
-
-.gallery-item h3 {
-  margin: 0.5em 0 0.25em;
-  font-size: 1.1em;
-  color: #333;
-}
-
-.caption {
-  font-size: 0.9em;
-  color: #666;
-  margin-bottom: 0.5em;
-}
-
-.upload-section {
-  background: #f9f1f8;
-  padding: 2em 1em;
-  max-width: 800px;
-  margin: 2em auto;     
-  border-radius: 10px;   
-}
-
-.upload-section h2 {
-  text-align: center;
-  color: #ce639e;
-  margin-bottom: 1em;
-}
-
-.upload-form {
-  display: grid;
-  gap: 4px;
-}
-
-.upload-form .form-field:last-child {
-  text-align: center;
-}
-
-.upload-form label {
-  font-weight: bold;
-  margin-bottom: 0.25em;
-  display: block;
-}
-
-.upload-form textarea {
-  width: 100%;
-  padding: 0.5em;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  resize: vertical;
-}
-
-.submit-button {
-  background: #ce639e;
-  color: #fff;
-  padding: 0.8em 1.75em;
-  border: none;
-  border-radius: 6px;
-  font-size: 1em;
-  cursor: pointer;
-  justify-self: center;
-  margin-top: 2em;    
   transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
@@ -442,10 +340,16 @@ input, textarea {
 .tip-of-the-day {
   background-color: #f9f1f8;
   width: 90%;
-  padding-bottom: 100;
   padding: 1.5em 2em;
   margin: 2em auto;
   box-shadow: 10px 10px 5px #b25288;
+}
+
+.tip-of-the-day img {
+  float: right; 
+  margin-right: 70px;
+  width: 25%;
+  height: 10%;
 }
 
 .recipe-container {
@@ -513,5 +417,21 @@ input, textarea {
 
   footer {
     font-size: 0.85em;
+  }
+
+  .tip-of-the-day img {
+    float: none;                 
+    display: block;              
+    margin: 0 auto 1em auto;     
+    width: 60%;                  
+    height: auto;                
+  }
+
+  .tip-of-the-day {
+    text-align: center;         
+  }
+
+  .form-section {
+    margin: 2em 1em;
   }
 }
