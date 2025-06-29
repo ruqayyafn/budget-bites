@@ -318,10 +318,23 @@ input, textarea {
 .tip-of-the-day {
   background-color: #f9f1f8;
   width: 90%;
-  padding-bottom: 100;
+  padding-bottom: 20%;
   padding: 1.5em 2em;
   margin: 2em auto;
   box-shadow: 10px 10px 5px #b25288;
+}
+
+.tip-of-the-day img {
+  float: right;
+  margin-right: 70px;
+  width: 25%;
+  height: auto;
+}
+
+.tip-of-the-day::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .recipe-container {
@@ -389,5 +402,21 @@ input, textarea {
 
   footer {
     font-size: 0.85em;
+  }
+
+  .tip-of-the-day img {
+    float: none;                 
+    display: block;              
+    margin: 0 auto 1em auto;     
+    width: 60%;                  
+    height: auto;                
+  }
+
+  .tip-of-the-day {
+    text-align: center;         
+  }
+
+  .form-wrapper {
+    margin: 2em 1em;
   }
 }
