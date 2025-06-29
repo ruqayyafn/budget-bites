@@ -138,29 +138,13 @@ footer {
   margin-bottom: 1em;
 }
 
-.upload-form {
-  display: grid;
-  gap: 4px;
+.form-field {
+  margin-bottom: 1em;
 }
 
 form div:last-child {
   display: flex;
   justify-content: center;
-}
-
-.upload-form label {
-  font-weight: bold;
-  margin-bottom: 0.25em;
-  display: block;
-}
-
-.upload-form textarea {
-  width: 100%;
-  padding: 0.5em;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  resize: vertical;
 }
 
 .submit-button {
@@ -256,30 +240,6 @@ form {
   width: 100%;
   box-sizing: border-box;
 }
-
-form div {
-  margin-bottom: 1em;
-}
-
-.form-plan {
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  form.planner-form {
-    max-width: none;   
-    width: 100%;
-  }
-
-.form-plan {
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  form.planner-form {
-    max-width: none;   
-    width: 100%;
-  }
 
 input, textarea {
   width: 100%;
