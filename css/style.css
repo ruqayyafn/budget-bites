@@ -11,6 +11,7 @@ h1, h2, h3 {
 }
 
 .logo{
+  display: inline-block;
   color: white;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.4); /* adds depth to text */
   padding: 0.5em 1em;
@@ -20,7 +21,6 @@ h1, h2, h3 {
 
 .logo:hover {
   transform: scale(1.05);
-  transition: transform 0.2s ease-in-out;
 }
 
 
