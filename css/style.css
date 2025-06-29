@@ -6,8 +6,12 @@ body {
   line-height: 1.6;
 }
 
-h1, h2, h3 {
+h1, h2 {
   font-family: Tahoma, sans-serif;
+}
+
+h3{
+  font-family: "Segoe UI", Tahoma, sans-serif;
 }
 
 .logo{
