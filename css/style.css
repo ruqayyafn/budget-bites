@@ -51,6 +51,9 @@ nav a:hover {
   background: #b25288;
 }
 
+.overview {
+  padding: 01em; /* adds space on left and right */
+}
 
 .overview li {
   padding: 0.5em;
@@ -82,15 +85,6 @@ nav a:hover {
   transform: scale(1.03);
 }
 
-
-.overview {
-  padding: 01em; /* adds space on left and right */
-}
-
-.submit-wrapper {
-  text-align: center;
-}
-
 input:hover {
   background-color: #ddc4d2;
 }
@@ -119,7 +113,17 @@ footer {
   padding: 1em;
 }
 
-.upload-section {
+form {
+  width: 100%;
+  box-sizing: border-box;
+  gap: 4px;
+}
+
+form div {
+  margin-bottom: 1em;
+}
+
+.form-wrapper {
   background: #f9f1f8;
   padding: 2em 1em;
   max-width: 800px;
@@ -132,30 +136,29 @@ footer {
   box-shadow: 10px 10px 5px #b25288;
 }
 
-.upload-section h2 {
+.form-wrapper h2 {
   text-align: center;
   color: #ce639e;
   margin-bottom: 1em;
 }
 
-.upload-form {
-  display: grid;
-  gap: 4px;
-}
-
-.upload-form label {
+form label {
   font-weight: bold;
   margin-bottom: 0.25em;
   display: block;
 }
 
-.upload-form textarea {
+form textarea {
   width: 100%;
   padding: 0.5em;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
   resize: vertical;
+}
+
+.form-field:last-child {
+  text-align: center;
 }
 
 .submit-button {
@@ -174,23 +177,10 @@ footer {
   transform: translateY(-1px);
 }
 
-.gallery-section {
-  padding: 2em 1em;
-  background: #ffffff;
-  max-width: 1000px;
-  margin: 2em auto;
-}
-
 .gallery-section h2 {
   text-align: center;
   color: #ce639e;
   margin-bottom: 1.5em;
-}
-
-.recipe-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1.5em;
 }
 
 .gallery-item {
@@ -220,62 +210,6 @@ footer {
   margin-bottom: 0.5em;
 }
 
-.upload-section {
-  background: #f9f1f8;
-  padding: 2em 1em;
-  max-width: 800px;
-  margin: 2em auto;     
-  border-radius: 10px;   
-}
-
-.upload-section h2 {
-  text-align: center;
-  color: #ce639e;
-  margin-bottom: 1em;
-}
-
-.upload-form {
-  display: grid;
-  gap: 4px;
-}
-
-form .form-field:last-child {
-  text-align: center;
-}
-
-.upload-form label {
-  font-weight: bold;
-  margin-bottom: 0.25em;
-  display: block;
-}
-
-.upload-form textarea {
-  width: 100%;
-  padding: 0.5em;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  resize: vertical;
-}
-
-.submit-button {
-  background: #ce639e;
-  color: #fff;
-  padding: 0.8em 1.75em;
-  border: none;
-  border-radius: 6px;
-  font-size: 1em;
-  cursor: pointer;
-  justify-self: center;
-  margin-top: 2em;    
-  transition: background-color 0.2s ease, transform 0.1s ease;
-}
-
-.submit-button:hover {
-  background: #b25288;
-  transform: translateY(-1px);
-}
-
 .gallery-section {
   padding: 2em 1em;
   background: #ffffff;
@@ -283,43 +217,10 @@ form .form-field:last-child {
   margin: 2em auto;
 }
 
-.gallery-section h2 {
-  text-align: center;
-  color: #ce639e;
-  margin-bottom: 1.5em;
-}
-
 .recipe-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1.5em;
-}
-
-.gallery-item {
-  border: 1px solid #e0d4dd;
-  border-radius: 8px;
-  overflow: hidden;
-  background: #fafafa;
-  text-align: center;
-  padding-bottom: 0.5em;
-}
-
-.gallery-item img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-}
-
-.gallery-item h3 {
-  margin: 0.5em 0 0.25em;
-  font-size: 1.1em;
-  color: #333;
-}
-
-.caption {
-  font-size: 0.9em;
-  color: #666;
-  margin-bottom: 0.5em;
 }
 
 .gallery {
@@ -347,26 +248,6 @@ form .form-field:last-child {
   margin: 0.5em 0 1em;
   color: #333;
 }
-
-form {
-  max-width: 600px;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-form div {
-  margin-bottom: 1em;
-}
-
-.form-plan {
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  form.planner-form {
-    max-width: none;   
-    width: 100%;
-  }
 
 .form-plan {
     width: 100%;
