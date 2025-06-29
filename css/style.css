@@ -142,10 +142,10 @@ form div {
   margin-bottom: 1em;
 }
 
-form div:last-child {
+/* form div:last-child {
   display: flex;
   justify-content: center;
-}
+} */
 
 form label {
   font-weight: bold;
