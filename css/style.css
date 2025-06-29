@@ -1,7 +1,7 @@
 /* css/style.css */
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
+  margin: 0; 
   padding: 0;
   line-height: 1.6;
 }
@@ -37,6 +37,13 @@ nav ul {
   gap: 1em;
   padding: 0;
   margin: 0;
+}
+
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 nav a {
@@ -266,11 +273,11 @@ input, textarea {
 
 .planner-grid {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
   padding: 2rem 1rem;
-  max-width: 1380px;    
-  margin: 0 auto;      
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 .day {
@@ -387,8 +394,22 @@ input, textarea {
     font-size: 1em;
   }
 
-  .gallery, .recipe-gallery, .planner-grid {
-    grid-template-columns: 1fr; /* single column on small screens */
+  .gallery,
+  .recipe-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5em;
+    padding: 2em 1em;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 900px) {
+    .planner-grid { gap: 2rem; }
+  }
+  
+  @media (min-width: 1200px) {
+    main { padding: 2rem; }
   }
 
   .cta-button {
