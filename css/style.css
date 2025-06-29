@@ -20,6 +20,7 @@ h3 {
   padding: 0.5em 1em;
   border-radius: 10px;
   text-decoration: none;
+  display: inline-block;
 }
 
 .logo:hover {
@@ -123,8 +124,8 @@ form div {
   margin-bottom: 1em;
 }
 
-.form-spacing {
-  padding: 0.5em;
+.shadow-spacing {
+  padding: 2em;
 }
 
 .form-wrapper {
@@ -376,7 +377,8 @@ input, textarea {
   }
 
   .tip-of-the-day {
-    text-align: center;         
+    text-align: center; 
+    padding: 1em;        
   }
 }
 
