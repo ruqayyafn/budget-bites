@@ -425,3 +425,25 @@ input, textarea {
     font-size: 0.85em;
   }
 }
+
+.hide {
+	display: none;
+}
+
+#form-errors {
+  color: red;
+  font-size: 0.9em;
+  margin-bottom: 1em;
+  padding: 0.5em 0.75em;
+  background: #ffeaea;
+  border: 1px solid #ffb3b3;
+  border-radius: 5px;
+}
+
+input.error {
+  border: 2px solid red;
+}
+
+textarea.error {
+  border: 2px solid red;
+}
