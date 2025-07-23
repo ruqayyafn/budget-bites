@@ -24,7 +24,6 @@ function checkForm() {
       message.classList.add("error");
    }
 
-   console.log("checkForm called, errors:", errors.length);
    if (errors.length > 0) {
       formErrors.classList.remove("hide");
       formErrors.innerHTML = "<ul><li>" + errors.join("</li><li>") + "</li></ul>";
@@ -41,5 +40,3 @@ document.getElementById("submit").addEventListener("click", function(event) {
       event.preventDefault();
    }
 });
-
-console.log("contact.js loaded and running!");
