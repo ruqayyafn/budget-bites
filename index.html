@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Budget Bites | Home</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="index.js" defer></script>
 </head>
 <body>
 
@@ -29,6 +30,8 @@
 
     <main>
         <section class="hero">
+        <div id="quote-of-the-day" class="motivational-quote"></div>
+        <button id="new-quote-btn" class="small-button">New Quote</button>
         <h2>Delicious Meals on a Tight Budget</h2>
         <p>Discover affordable, easy-to-make recipes that are perfect for meal prepping and saving money.</p>
         <a href="recipe-gallery.html" class="cta-button">Browse Recipes</a>
@@ -42,6 +45,14 @@
             <li>Tips for saving money on groceries</li>
             <li>Upload and share your own creations</li>
         </ul>
+        </section>
+
+        <section id="reaction-poll" class="hero">
+            <h4>How are you feeling today?</h4>
+            <button class="small-button" data-reaction="inspired">🌟 Feeling Inspired</button>
+            <button class="small-button" data-reaction="ideas">💡 Need More Ideas</button>
+            <button class="small-button" data-reaction="love">❤️ Love This Site!</button>
+            <p id="reaction-response" class="reaction-message"></p>
         </section>
     </main>
 
