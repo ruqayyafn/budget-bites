@@ -41,17 +41,24 @@ quoteButton.addEventListener("click", () => {
 
 const reactionButtons = document.querySelectorAll(".small-button");
 const reactionResponse = document.getElementById("reaction-response");
-
-const reactionMessages = {
-  inspired: "We love that you're feeling inspired! Try a new recipe today!",
-  ideas: "Check out our Tips page for fresh ideas and tricks!",
-  love: "Aww, we love you too! ❤️ Thanks for visiting!"
-};
-
 reactionButtons.forEach(button => {
   button.addEventListener("click", () => {
     const reactionType = button.dataset.reaction;
-    reactionResponse.textContent = reactionMessages[reactionType];
+
+    reactionResponse.innerHTML = "";
+
+    let message;
+
+    if (reactionType === "inspired") {
+      message = `We love that you're feeling inspired! <a href="recipe-gallery.html">Try a new recipe today!</a>`;
+    } else if (reactionType === "ideas") {
+      message = `Check out our <a href="tips.html">Tips page</a> for fresh ideas and tricks!`;
+    } else if (reactionType === "love") {
+      message = `Aww, we love you too! Thanks for visiting! ❤️`;
+    }
+
+    reactionResponse.innerHTML = message;
   });
 });
+
 
