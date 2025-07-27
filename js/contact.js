@@ -9,8 +9,8 @@ function checkForm() {
 
    let errors = [];
 
-   if (fullName.value.trim().length < 1) {
-      errors.push("Missing full name.");
+   if (!fullName.value.match(/^[A-Za-z]+\s+[A-Za-z]+$/)) {
+      errors.push("Please enter both first and last name.");
       fullName.classList.add("error");
    }
 
