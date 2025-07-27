@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Budget Bites | About Us</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="about.js"defer></script>
 </head>
 
 <body>
@@ -40,23 +41,35 @@
     </section>
 
 
-    <section class="overview">
-      <h3>Who We Serve</h3>
-      <ul>
-        <li><strong>Students</strong> — living on tight budgets and in need of quick, affordable meal options.</li>
-        <li><strong>Young Professionals</strong> — balancing work and life, looking to meal prep efficiently for the week.</li>
-        <li><strong>Families</strong> — seeking cost-effective, time-saving recipes that everyone can enjoy.</li>
-      </ul>
+    <section id="who-we-serve" class="hero">
+      <h2>Who We Serve</h2>
+      <div class="audience-grid">
+        <div class="audience-card">
+          <h3>👨‍🎓 Students</h3>
+          <p>Quick, affordable meals for busy schedules.</p>
+        </div>
+        <div class="audience-card">
+          <h3>👨‍👩‍👧 Families</h3>
+          <p>Budget-friendly options for everyone at the table.</p>
+
+        </div>
+        <div class="audience-card">
+          <h3>👩‍🍳 New Cooks</h3>
+          <p>Simple recipes to get you started in the kitchen.</p>
+        </div>
+      </div>
     </section>
 
+
     <section class="overview">
-    <h3>Meet the Team</h3>
-    <ul>
-        <li><strong>Ruqayya Naqvi</strong> – Focused on layout consistency, user experience, and overall site structure</li>
-        <li><strong>Muhammed Ahmed</strong> – Contributed to recipe organization and visual presentation of content</li>
-        <li><strong>Justin Gamez</strong> – Worked on interactive features and helped structure dynamic content areas</li>
-        <li><strong>Brianna Nguyen</strong> – Developed resourceful and informative sections, enhancing user engagement</li>
+    <h3>Meet the Team - click to find out more!</h3>
+    <ul id="team-list">
+      <li data-name="ruqayya"><strong>Ruqayya Naqvi</strong> – Focused on layout consistency, user experience, and overall site structure</li>
+      <li data-name="muhammed"><strong>Muhammed Ahmed</strong> – Contributed to recipe organization and visual presentation of content</li>
+      <li data-name="justin"><strong>Justin Gamez</strong> – Worked on interactive features and helped structure dynamic content areas</li>
+      <li data-name="brianna"><strong>Brianna Nguyen</strong> – Developed resourceful and informative sections, enhancing user engagement</li>
     </ul>
+    <div id="team-extra-info" class="team-info"></div>
     </section>
   </main>
 
