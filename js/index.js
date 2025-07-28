@@ -55,6 +55,8 @@ reactionButtons.forEach(button => {
       message = `Check out our <a href="tips.html">Tips page</a> for fresh ideas and tricks!`;
     } else if (reactionType === "love") {
       message = `Aww, we love you too! Thanks for visiting! ❤️`;
+    } else{
+      message = "";
     }
 
     reactionResponse.innerHTML = message;
