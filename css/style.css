@@ -506,3 +506,12 @@ textarea.error {
 .audience-card:hover {
   transform: scale(1.02);
 }
+
+#tip-of-the-day-quote {
+  font-style: italic;
+}
+
+#double-click-message {
+  text-align: center;
+  color: #b25288;
+}
