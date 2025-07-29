@@ -506,3 +506,75 @@ textarea.error {
 .audience-card:hover {
   transform: scale(1.02);
 }
+
+.slideshow-container {
+  position: relative;
+  max-width: 650px;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+/* Every image sits on top of each other */
+.slideshow-img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  border-radius: 10px;
+  max-height: 400px;
+  object-fit: cover;
+  margin: 1em 0;
+}
+
+/* Only the active image is visible */
+.slideshow-img.active {
+  opacity: 1;
+  position: relative;
+}
+
+.slide-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-size: 18px;
+  z-index: 2;
+  border-radius: 50%;
+}
+
+.slide-btn.prev { left: 10px; }
+.slide-btn.next { right: 10px; }
+
+.slide-btn:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.dots-container {
+  text-align: center;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: rgba(255, 255, 255, 1);
+}
