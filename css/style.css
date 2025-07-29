@@ -522,4 +522,12 @@ textarea.error {
 
 .controls #random-fill:hover {
   background: #5aa85a;
+=======
+#tip-of-the-day-quote {
+  font-style: italic;
+}
+
+#double-click-message {
+  text-align: center;
+  color: #b25288;
 }

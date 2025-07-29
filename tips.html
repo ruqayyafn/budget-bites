@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Budget Bites | Tips</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/tips.js" defer></script>
 </head>
 <body>
     <header>
@@ -31,14 +32,15 @@
                 <h3 class="centered-heading" tabindex="1">Tip of the Day</h3>
                 <div class="tip-of-the-day-content">
                     <blockquote>
-                        <q tabindex="2"><i>Add salt to your cutting board when mincing garlic</i></q>
-                        <p>- Gordan Ramsay</p>
-                        <p tabindex="3">Since salt is abrasive, by adding salt to your cutting board before mincing garlic,
+                        <q id="tip-of-the-day-quote" tabindex="2"><i>Add salt to your cutting board when mincing garlic</i></q>
+                        <p id="tip-of-the-day-author">- Gordan Ramsay</p>
+                        <p id="tip-of-the-day-details" tabindex="3">Since salt is abrasive, by adding salt to your cutting board before mincing garlic,
                         it allows you to get a finer chop on the garlic. Additionally, salt will keep the garlic
                         from sticking to your knife. Avoid buying a garlic press and try this tip instead!</p>
                     </blockquote>
-                    <img src="images/mincing-garlic.jpg" alt="mincing garlic on a cutting board">
+                    <img id="tip-of-the-day-img" src="images/mincing-garlic.jpg" alt="mincing garlic on a cutting board">
                 </div>
+                <p id="double-click-message"><b>Double click anywhere in this box for a new quote!</b></p>
             </section>
         </section>
         <section class="gallery">
@@ -76,7 +78,7 @@
     </main>
     <footer>
         <p>Photos from: 
-            <a href="https://www.themediterraneandish.com/how-to-mince-garlic/" target="_blank" rel="noopener noreferrer">The Mediterranean Dish</a>, 
+            <a id="tip-of-the-day-image-reference" href="https://www.themediterraneandish.com/how-to-mince-garlic/" target="_blank" rel="noopener noreferrer">The Mediterranean Dish</a>, 
             <a href="https://www.foodrepublic.com/1345800/underrated-frozen-vegetables-grocery-how-to-cook-with-them/" target="_blank" rel="noopener noreferrer">Food Republic</a>,
             <a href="https://www.lotsof.co.nz/are-natural-ingredients-always-better" target="_blank" rel="noopener noreferrer">Lots of Baking Mixes</a>, 
             <a href="https://www.foodnetwork.com/how-to/packages/shopping/articles/grocery-pickup-and-delivery-services" target="_blank" rel="noopener noreferrer">Food Network</a>, 
