@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Budget Bites | Upload Recipe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Budget Bites | Meal Planner</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
+
   <header>
     <a href="index.html" class="logo">
       <h1>Budget Bites</h1>
@@ -25,57 +24,142 @@
       </ul>
     </nav>
   </header>
-  
+
   <main>
-    <section class="shadow-spacing">
-      <section class="form-wrapper">
-        <h2>Share Your Recipe</h2>
-        <form action="#" method="post" enctype="multipart/form-data">
-          <div class="form-field">
-            <label for="user-email">Email</label>
-            <input type="email" id="user-email" name="user-email" placeholder="e.g., alex@example.com">
-          </div>
-          <div class="form-field">
-            <label for="user-name">Your Name</label>
-            <input type="text" id="user-name" name="user-name" placeholder="e.g., Alex">
-          </div>
-          <div class="form-field">
-            <label for="recipe-title">Recipe Title</label>
-            <input type="text" id="recipe-title" name="recipe-title" placeholder="e.g., Easy Pancakes">
-          </div>
-          <div class="form-field">
-            <label for="estimated-time">Estimated Time</label>
-            <input type="text" id="estimated-time" name="estimated-time" placeholder="e.g., 30 mins or 1 hour">
-          </div>
-          <div class="form-field">
-            <label for="estimated-cost">Estimated Cost</label>
-            <input type="text" id="estimated-cost" name="estimated-cost" placeholder="e.g., $10.00">
-          </div>
-          <div class="form-field">
-            <label for="recipe-image">Recipe Image</label>
-            <input type="file" id="recipe-image" name="recipe-image" accept="image/*">
-          </div>
-          <div class="form-field">
-            <label for="ingredients">Ingredients</label>
-            <textarea id="ingredients" name="ingredients" rows="4" placeholder="Ingredients (one per line)"></textarea>
-          </div>
-          <div class="form-field">
-            <label for="instructions">Instructions</label>
-            <textarea id="instructions" name="instructions" rows="5" placeholder="Step-by-step instructions"></textarea>
-          </div>
-          <div id="form-errors" class="hide"></div>
-          <div class="form-field">
-            <button type="submit" class="submit-button">Upload Recipe</button>
-          </div>
-        </form>
-      </section>
+    <section class="hero">
+      <h2>Plan Your Meals for the Week</h2>
+      <p>Fill in your meals below and click "Email Plan". Replace <code>you@example.com</code> with your address to save the plan via email.</p>
     </section>
+
+    <form class="planner-form"
+          action="#"
+          method="post"
+          enctype="text/plain">
+
+      <div class="planner-grid">
+     
+        <fieldset class="day">
+          <label class="day-label">Monday</label>
+          <input id="monday-breakfast"
+                 name="monday-breakfast"
+                 type="text"
+                 placeholder="Breakfast">
+          <input id="monday-lunch"
+                 name="monday-lunch"
+                 type="text"
+                 placeholder="Lunch">
+          <input id="monday-dinner"
+                 name="monday-dinner"
+                 type="text"
+                 placeholder="Dinner">
+        </fieldset>
+
+        <fieldset class="day">
+          <label class="day-label">Tuesday</label>
+          <input id="tuesday-breakfast"
+                 name="tuesday-breakfast"
+                 type="text"
+                 placeholder="Breakfast">
+          <input id="tuesday-lunch"
+                 name="tuesday-lunch"
+                 type="text"
+                 placeholder="Lunch">
+          <input id="tuesday-dinner"
+                 name="tuesday-dinner"
+                 type="text"
+                 placeholder="Dinner">
+        </fieldset>
+
+        <fieldset class="day">
+          <label class="day-label">Wednesday</label>
+          <input id="wednesday-breakfast"
+                 name="wednesday-breakfast"
+                 type="text"
+                 placeholder="Breakfast">
+          <input id="wednesday-lunch"
+                 name="wednesday-lunch"
+                 type="text"
+                 placeholder="Lunch">
+          <input id="wednesday-dinner"
+                 name="wednesday-dinner"
+                 type="text"
+                 placeholder="Dinner">
+        </fieldset>
+
+        <fieldset class="day">
+          <label class="day-label">Thursday</label>
+          <input id="thursday-breakfast"
+                 name="thursday-breakfast"
+                 type="text"
+                 placeholder="Breakfast">
+          <input id="thursday-lunch"
+                 name="thursday-lunch"
+                 type="text"
+                 placeholder="Lunch">
+          <input id="thursday-dinner"
+                 name="thursday-dinner"
+                 type="text"
+                 placeholder="Dinner">
+        </fieldset>
+
+        <fieldset class="day">
+          <label class="day-label">Friday</label>
+          <input id="friday-breakfast"
+                 name="friday-breakfast"
+                 type="text"
+                 placeholder="Breakfast">
+          <input id="friday-lunch"
+                 name="friday-lunch"
+                 type="text"
+                 placeholder="Lunch">
+          <input id="friday-dinner"
+                 name="friday-dinner"
+                 type="text"
+                 placeholder="Dinner">
+        </fieldset>
+
+        <fieldset class="day">
+          <label class="day-label">Saturday</label>
+          <input id="saturday-breakfast"
+                 name="saturday-breakfast"
+                 type="text"
+                 placeholder="Breakfast">
+          <input id="saturday-lunch"
+                 name="saturday-lunch"
+                 type="text"
+                 placeholder="Lunch">
+          <input id="saturday-dinner"
+                 name="saturday-dinner"
+                 type="text"
+                 placeholder="Dinner">
+        </fieldset>
+
+        <fieldset class="day">
+          <label class="day-label">Sunday</label>
+          <input id="sunday-breakfast"
+                 name="sunday-breakfast"
+                 type="text"
+                 placeholder="Breakfast">
+          <input id="sunday-lunch"
+                 name="sunday-lunch"
+                 type="text"
+                 placeholder="Lunch">
+          <input id="sunday-dinner"
+                 name="sunday-dinner"
+                 type="text"
+                 placeholder="Dinner">
+        </fieldset>
+      </div>
+
+      <div class="controls">
+        <input type="submit" value="Email Plan">
+        <input type="reset" value="Clear Plan">
+      </div>
+    </form>
   </main>
-  
+
   <footer>
     <p>&copy; 2025 Budget Bites | Creators: Ruqayya, Muhammed, Justin, and Brianna</p>
   </footer>
-
-  <script src="js/upload.js"></script>
 </body>
 </html>
