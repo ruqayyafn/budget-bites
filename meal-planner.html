@@ -17,7 +17,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="recipe-gallery.html">Recipes</a></li>
         <li><a href="upload.html">Upload</a></li>
-        <li><a href="meal-planner.html">Meal Planner</a></li>
+        <li><a href="meal-planner.html" class="active">Meal Planner</a></li>
         <li><a href="tips.html">Tips</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -28,132 +28,66 @@
   <main>
     <section class="hero">
       <h2>Plan Your Meals for the Week</h2>
-      <p>Fill in your meals below and click "Email Plan". Replace <code>you@example.com</code> with your address to save the plan via email.</p>
+      <p>Click "Random Meals" for inspiration, or fill in manually. When done, click "Email Plan".</p>
     </section>
 
-    <form class="planner-form"
-          action="#"
-          method="post"
-          enctype="text/plain">
-
+    <!-- Use mailto so it opens email client -->
+    <form class="planner-form" action="mailto:you@example.com" method="post" enctype="text/plain">
       <div class="planner-grid">
-     
         <fieldset class="day">
           <label class="day-label">Monday</label>
-          <input id="monday-breakfast"
-                 name="monday-breakfast"
-                 type="text"
-                 placeholder="Breakfast">
-          <input id="monday-lunch"
-                 name="monday-lunch"
-                 type="text"
-                 placeholder="Lunch">
-          <input id="monday-dinner"
-                 name="monday-dinner"
-                 type="text"
-                 placeholder="Dinner">
+          <input name="monday-breakfast" type="text" placeholder="Breakfast">
+          <input name="monday-lunch" type="text" placeholder="Lunch">
+          <input name="monday-dinner" type="text" placeholder="Dinner">
         </fieldset>
 
         <fieldset class="day">
           <label class="day-label">Tuesday</label>
-          <input id="tuesday-breakfast"
-                 name="tuesday-breakfast"
-                 type="text"
-                 placeholder="Breakfast">
-          <input id="tuesday-lunch"
-                 name="tuesday-lunch"
-                 type="text"
-                 placeholder="Lunch">
-          <input id="tuesday-dinner"
-                 name="tuesday-dinner"
-                 type="text"
-                 placeholder="Dinner">
+          <input name="tuesday-breakfast" type="text" placeholder="Breakfast">
+          <input name="tuesday-lunch" type="text" placeholder="Lunch">
+          <input name="tuesday-dinner" type="text" placeholder="Dinner">
         </fieldset>
 
         <fieldset class="day">
           <label class="day-label">Wednesday</label>
-          <input id="wednesday-breakfast"
-                 name="wednesday-breakfast"
-                 type="text"
-                 placeholder="Breakfast">
-          <input id="wednesday-lunch"
-                 name="wednesday-lunch"
-                 type="text"
-                 placeholder="Lunch">
-          <input id="wednesday-dinner"
-                 name="wednesday-dinner"
-                 type="text"
-                 placeholder="Dinner">
+          <input name="wednesday-breakfast" type="text" placeholder="Breakfast">
+          <input name="wednesday-lunch" type="text" placeholder="Lunch">
+          <input name="wednesday-dinner" type="text" placeholder="Dinner">
         </fieldset>
 
         <fieldset class="day">
           <label class="day-label">Thursday</label>
-          <input id="thursday-breakfast"
-                 name="thursday-breakfast"
-                 type="text"
-                 placeholder="Breakfast">
-          <input id="thursday-lunch"
-                 name="thursday-lunch"
-                 type="text"
-                 placeholder="Lunch">
-          <input id="thursday-dinner"
-                 name="thursday-dinner"
-                 type="text"
-                 placeholder="Dinner">
+          <input name="thursday-breakfast" type="text" placeholder="Breakfast">
+          <input name="thursday-lunch" type="text" placeholder="Lunch">
+          <input name="thursday-dinner" type="text" placeholder="Dinner">
         </fieldset>
 
         <fieldset class="day">
           <label class="day-label">Friday</label>
-          <input id="friday-breakfast"
-                 name="friday-breakfast"
-                 type="text"
-                 placeholder="Breakfast">
-          <input id="friday-lunch"
-                 name="friday-lunch"
-                 type="text"
-                 placeholder="Lunch">
-          <input id="friday-dinner"
-                 name="friday-dinner"
-                 type="text"
-                 placeholder="Dinner">
+          <input name="friday-breakfast" type="text" placeholder="Breakfast">
+          <input name="friday-lunch" type="text" placeholder="Lunch">
+          <input name="friday-dinner" type="text" placeholder="Dinner">
         </fieldset>
 
         <fieldset class="day">
           <label class="day-label">Saturday</label>
-          <input id="saturday-breakfast"
-                 name="saturday-breakfast"
-                 type="text"
-                 placeholder="Breakfast">
-          <input id="saturday-lunch"
-                 name="saturday-lunch"
-                 type="text"
-                 placeholder="Lunch">
-          <input id="saturday-dinner"
-                 name="saturday-dinner"
-                 type="text"
-                 placeholder="Dinner">
+          <input name="saturday-breakfast" type="text" placeholder="Breakfast">
+          <input name="saturday-lunch" type="text" placeholder="Lunch">
+          <input name="saturday-dinner" type="text" placeholder="Dinner">
         </fieldset>
 
         <fieldset class="day">
           <label class="day-label">Sunday</label>
-          <input id="sunday-breakfast"
-                 name="sunday-breakfast"
-                 type="text"
-                 placeholder="Breakfast">
-          <input id="sunday-lunch"
-                 name="sunday-lunch"
-                 type="text"
-                 placeholder="Lunch">
-          <input id="sunday-dinner"
-                 name="sunday-dinner"
-                 type="text"
-                 placeholder="Dinner">
+          <input name="sunday-breakfast" type="text" placeholder="Breakfast">
+          <input name="sunday-lunch" type="text" placeholder="Lunch">
+          <input name="sunday-dinner" type="text" placeholder="Dinner">
         </fieldset>
       </div>
 
       <div class="controls">
         <input type="submit" value="Email Plan">
         <input type="reset" value="Clear Plan">
+        <button type="button" id="random-fill">Random Meals</button>
       </div>
     </form>
   </main>
@@ -161,5 +95,7 @@
   <footer>
     <p>&copy; 2025 Budget Bites | Creators: Ruqayya, Muhammed, Justin, and Brianna</p>
   </footer>
+
+  <script src="js/meal-planner.js"></script>
 </body>
 </html>
