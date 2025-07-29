@@ -64,3 +64,4 @@ document.addEventListener("DOMContentLoaded", () => {
       window.location.href = `mailto:${email}?subject=Meal Plan&body=${encodeURIComponent(message)}`;
     });
   });
+  
