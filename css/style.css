@@ -507,6 +507,14 @@ textarea.error {
   transform: scale(1.02);
 }
 
+#tip-of-the-day-quote {
+  font-style: italic;
+}
+
+#double-click-message {
+  text-align: center;
+  color: #b25288;
+}
 .controls #random-fill {
   display: inline-block;
   padding: 0.6rem 1.2rem;
@@ -522,12 +530,4 @@ textarea.error {
 
 .controls #random-fill:hover {
   background: #5aa85a;
-=======
-#tip-of-the-day-quote {
-  font-style: italic;
-}
-
-#double-click-message {
-  text-align: center;
-  color: #b25288;
 }
