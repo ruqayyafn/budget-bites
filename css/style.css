@@ -231,23 +231,39 @@ form textarea {
   margin: 2em auto;
 }
 
-.recipe-gallery {
+/* .recipe-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1.5em;
-}
+} */
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-template-columns: repeat(3, 1fr); /* stays 3 columns */
   gap: 1.5em;
   padding: 2em;
+  background-color: #fafafa;   /* light neutral background */
+  border-radius: 12px;
+}
+
+.recipe-card {
+  background: #f9f1f8;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); */
+  box-shadow: 10px 10px 5px #d88cb7;
 }
 
 .recipe-card img {
   width: 100%;
-  height: 300px;         /* force a consistent height */
-  object-fit: cover;     /* crop without stretching */
+  height: 300px;
+  object-fit: cover;
   display: block;
 }
 
