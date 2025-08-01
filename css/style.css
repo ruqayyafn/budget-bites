@@ -507,7 +507,6 @@ textarea.error {
   transform: scale(1.02);
 }
 
-<<<<<<< HEAD
 .slideshow-container {
   position: relative;
   max-width: 650px;
@@ -578,7 +577,8 @@ textarea.error {
 
 .dot.active {
   background-color: rgba(255, 255, 255, 1);
-=======
+}
+
 #tip-of-the-day-quote {
   font-style: italic;
 }
@@ -586,5 +586,4 @@ textarea.error {
 #double-click-message {
   text-align: center;
   color: #b25288;
->>>>>>> c9ca7594f6938a5cec303bb62531e4cc9c68b918
 }
