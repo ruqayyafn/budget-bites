@@ -102,10 +102,12 @@ function updateTipOfTheDay() {
 
 
 document.addEventListener("DOMContentLoaded", function() {
-  const el = document.querySelector(".tip-of-the-day");
+  const tipsButton = document.getElementById("tips-button");
 
-  if (el) {
-    el.addEventListener("dblclick", function() {
+  updateTipOfTheDay();
+
+  if (tipsButton) {
+    tipsButton.addEventListener("dblclick", function() {
       updateTipOfTheDay();
     });
   }
