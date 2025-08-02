@@ -357,20 +357,26 @@ input, textarea {
 
 .tip-of-the-day {
   background-color: #f9f1f8;
-  width: 90%;
-  padding: 1.5em 2em;
-  margin: 2em auto;
   box-shadow: 10px 10px 5px #b25288;
+  padding: 2rem;
+  display: grid;
+  justify-items: center;
+  width: 70%;
+  margin: auto;
 }
 
+/* Grid layout for text and image */
 .tip-of-the-day-content {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 60rem;
+  margin: 2rem 0;
 }
 
-.tip-of-the-day img {
-  margin-right: 70px;
-  width: 25%;
-  height: 25%;
+#tip-of-the-day-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
 .recipe-container {
@@ -403,22 +409,15 @@ input, textarea {
   margin: 1em 0;
 }
 
-@media (max-width: 1030px) {
+@media (max-width: 1280px) { 
   .tip-of-the-day-content {
-    text-align: center;  
-    flex-direction: column; 
-    align-items: center;  
+    grid-template-columns: 1fr; /* Stack vertically */
+    text-align: center;
   }
 
-  .tip-of-the-day img {
-    margin-right: 0;
-    width: 60%;                  
-    height: auto;
-  }
-
-  .tip-of-the-day {
-    text-align: center; 
-    padding: 1em;        
+  #tip-of-the-day-img {
+    margin:auto;
+    width: 80%;
   }
 }
 
@@ -638,10 +637,6 @@ textarea.error {
   font-style: italic;
 }
 
-#double-click-message {
-  text-align: center;
-  color: #b25288;
-}
 .controls #random-fill {
   display: inline-block;
   padding: 0.6rem 1.2rem;
