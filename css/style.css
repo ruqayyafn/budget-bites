@@ -148,10 +148,6 @@ form div {
   margin-bottom: 1em;
 }
 
-.shadow-spacing {
-  padding: 2em;
-}
-
 .form-wrapper {
   background: #f9f1f8;
   padding: 2em 1em;
@@ -201,12 +197,6 @@ form textarea {
   transform: translateY(-1px);
 }
 
-.gallery-section h2 {
-  text-align: center;
-  color: #ce639e;
-  margin-bottom: 1.5em;
-}
-
 .gallery-item {
   border: 1px solid #e0d4dd;
   border-radius: 8px;
@@ -227,25 +217,6 @@ form textarea {
   font-size: 1.1em;
   color: #333;
 }
-
-.caption {
-  font-size: 0.9em;
-  color: #666;
-  margin-bottom: 0.5em;
-}
-
-.gallery-section {
-  padding: 2em 1em;
-  background: #ffffff;
-  max-width: 1000px;
-  margin: 2em auto;
-}
-
-/* .recipe-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1.5em;
-} */
 
 .gallery {
   display: grid;
@@ -289,15 +260,10 @@ form textarea {
   color: #333;
 }
 
-.form-plan {
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  form.planner-form {
-    max-width: none;   
-    width: 100%;
-  }
+form.planner-form {
+  max-width: none;   
+  width: 100%;
+}
 
 input, textarea {
   width: 100%;
@@ -311,23 +277,6 @@ input, textarea {
   padding: 2rem 1rem;
   max-width: 100%;
   margin: 0 auto;
-}
-
-.day {
-  background: #fff;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 1rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
-
-.day h4 {
-  margin: 0 0 0.75rem;
-  font-size: 1.1rem;
-}
-
-.day input[type="text"] {
-  margin-bottom: 0.5rem;
 }
 
 .controls {
@@ -358,8 +307,7 @@ input, textarea {
 .tip-of-the-day {
   background-color: #f9f1f8;
   width: 90%;
-  padding: 1.5em 2em;
-  margin: 2em auto;
+  margin: auto;
   box-shadow: 10px 10px 5px #b25288;
 }
 

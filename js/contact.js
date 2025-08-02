@@ -1,17 +1,17 @@
 function checkForm() {
-   const fullName = document.getElementById("full-name");
+   const name = document.getElementById("name");
    const email = document.getElementById("email-addr");
    const message = document.getElementById("message");
    const formErrors = document.getElementById("form-errors");
 
    formErrors.classList.remove("hide");
-   [fullName, email, message].forEach(input => input.classList.remove("error"));
+   [name, email, message].forEach(input => input.classList.remove("error"));
 
    let errors = [];
 
-   if (!fullName.value.match(/^[A-Za-z]+\s+[A-Za-z]+$/)) {
-      errors.push("Please enter both first and last name.");
-      fullName.classList.add("error");
+   if (name.value.trim().length < 1) {
+      errors.push("Please enter your name.");
+      name.classList.add("error");
    }
 
    if (!email.value.match(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,5}$/)) {
