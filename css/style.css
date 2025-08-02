@@ -148,10 +148,6 @@ form div {
   margin-bottom: 1em;
 }
 
-.shadow-spacing {
-  padding: 2em;
-}
-
 .form-wrapper {
   background: #f9f1f8;
   padding: 2em 1em;
@@ -311,8 +307,7 @@ input, textarea {
 .tip-of-the-day {
   background-color: #f9f1f8;
   width: 90%;
-  padding: 1.5em 2em;
-  margin: 2em auto;
+  margin: auto;
   box-shadow: 10px 10px 5px #b25288;
 }
 
