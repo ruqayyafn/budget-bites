@@ -1,3 +1,4 @@
+// object to store all the quotes, authors and additional details
 const tipsOfTheDayQuotes = {
   "Add salt to your cutting board when mincing garlic": {
     "Gordan Ramsay":
@@ -41,6 +42,7 @@ const tipsOfTheDayQuotes = {
   }
 };
 
+// object to store the image src and alt
 const imageSrcAndAlt = {
     "images/mincing-garlic.jpg":"mincing garlic",
     "images/anchovies.jpg":"dried anchovies",
@@ -54,6 +56,7 @@ const imageSrcAndAlt = {
     "images/croutons.jpg":"croutons",
 }
 
+// object mapping image source names to their reference URLs
 const imageReferences = {
     "The Mediterranean Dish":"https://www.themediterraneandish.com/how-to-mince-garlic/",
     "Carving a Journey":"https://www.carvingajourney.com/dried-anchovies-in-korean-cooking-myeolchi/",
@@ -67,45 +70,56 @@ const imageReferences = {
     "Two Peas and their Pod":"https://www.twopeasandtheirpod.com/homemade-croutons/",
 }
 
+// function to update the "Tip of the Day" content on the page
 function updateTipOfTheDay() {
+    // select DOM elements where content will be updated
     let quote = document.getElementById("tip-of-the-day-quote");
     let author = document.getElementById("tip-of-the-day-author");
     let details = document.getElementById("tip-of-the-day-details");
     let image = document.getElementById("tip-of-the-day-img");
     let imageReference = document.getElementById("tip-of-the-day-image-reference");
 
+    // get all quote keys (tip titles/quotes)
     let tipsOfTheDayQuotesKeys = Object.keys(tipsOfTheDayQuotes);
     let randomIndex = 0;
     let newQuote = "";
 
+    // pick a new random quote, avoiding repetition of the current one
     do {
-        randomIndex = Math.floor(Math.random() * tipsOfTheDayQuotesKeys.length);
-        newQuote = tipsOfTheDayQuotesKeys[randomIndex];
+      randomIndex = Math.floor(Math.random() * tipsOfTheDayQuotesKeys.length);
+      newQuote = tipsOfTheDayQuotesKeys[randomIndex];
     } while (newQuote === quote.textContent);
 
+    // get the corresponding author and details
     let newAuthor = Object.keys(tipsOfTheDayQuotes[newQuote])[0]; 
     let newDetails = tipsOfTheDayQuotes[newQuote][newAuthor]; 
 
-
+    // update text content in the DOM
     quote.textContent = newQuote;
     author.textContent = "- " + newAuthor;
     details.textContent = newDetails;
 
+    // update the image src and alt attributes
     let imageSrcAndAltKeys = Object.keys(imageSrcAndAlt); 
     image.setAttribute("src", imageSrcAndAltKeys[randomIndex]);
     image.setAttribute("alt", imageSrcAndAlt[imageSrcAndAltKeys[randomIndex]]);
 
+    // update the source reference text and URL
     let imageReferencesKeys = Object.keys(imageReferences);
     imageReference.textContent = imageReferencesKeys[randomIndex];
     imageReference.setAttribute("href", imageReferences[imageReferencesKeys[randomIndex]]);
 }
 
-
+// waits until DOM is ready before manipulating elements
 document.addEventListener("DOMContentLoaded", function() {
-  const el = document.querySelector(".tip-of-the-day");
+  const tipsButton = document.getElementById("tips-button");
 
-  if (el) {
-    el.addEventListener("dblclick", function() {
+  // updates the "Tip of the Day" content when the page reloads
+  updateTipOfTheDay();
+
+  if (tipsButton) {
+    // generates a new tip when the button is double clicked 
+    tipsButton.addEventListener("dblclick", function() {
       updateTipOfTheDay();
     });
   }
