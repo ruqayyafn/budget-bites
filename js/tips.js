@@ -79,8 +79,8 @@ function updateTipOfTheDay() {
     let newQuote = "";
 
     do {
-        randomIndex = Math.floor(Math.random() * tipsOfTheDayQuotesKeys.length);
-        newQuote = tipsOfTheDayQuotesKeys[randomIndex];
+      randomIndex = Math.floor(Math.random() * tipsOfTheDayQuotesKeys.length);
+      newQuote = tipsOfTheDayQuotesKeys[randomIndex];
     } while (newQuote === quote.textContent);
 
     let newAuthor = Object.keys(tipsOfTheDayQuotes[newQuote])[0]; 
@@ -103,9 +103,12 @@ function updateTipOfTheDay() {
 
 document.addEventListener("DOMContentLoaded", function() {
   const el = document.querySelector(".tip-of-the-day");
+  const tipsButton = document.getElementById("tips-button");
 
-  if (el) {
-    el.addEventListener("dblclick", function() {
+  updateTipOfTheDay();
+
+  if (tipsButton) {
+    tipsButton.addEventListener("dblclick", function() {
       updateTipOfTheDay();
     });
   }
