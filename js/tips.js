@@ -72,42 +72,81 @@ const imageReferences = {
 
 // function to update the "Tip of the Day" content on the page
 function updateTipOfTheDay() {
-    // select DOM elements where content will be updated
-    let quote = document.getElementById("tip-of-the-day-quote");
-    let author = document.getElementById("tip-of-the-day-author");
-    let details = document.getElementById("tip-of-the-day-details");
-    let image = document.getElementById("tip-of-the-day-img");
-    let imageReference = document.getElementById("tip-of-the-day-image-reference");
+  // selects the container where the content will be added
+  const container = document.querySelector(".tip-of-the-day-content");
 
-    // get all quote keys (tip titles/quotes)
-    let tipsOfTheDayQuotesKeys = Object.keys(tipsOfTheDayQuotes);
-    let randomIndex = 0;
-    let newQuote = "";
+  // gets the existing elements
+  let quote = document.getElementById("tip-of-the-day-quote");
+  let author = document.getElementById("tip-of-the-day-author");
+  let details = document.getElementById("tip-of-the-day-details");
+  let image = document.getElementById("tip-of-the-day-img");
 
-    // pick a new random quote, avoiding repetition of the current one
-    do {
-      randomIndex = Math.floor(Math.random() * tipsOfTheDayQuotesKeys.length);
-      newQuote = tipsOfTheDayQuotesKeys[randomIndex];
-    } while (newQuote === quote.textContent);
+  const imageReference = document.getElementById("tip-of-the-day-image-reference");
 
-    // get the corresponding author and details
-    let newAuthor = Object.keys(tipsOfTheDayQuotes[newQuote])[0]; 
-    let newDetails = tipsOfTheDayQuotes[newQuote][newAuthor]; 
+  // if any of the main elements don't exist yet, create and append them
+  if (!quote || !author || !details || !image) {
+    // clear the container
+    container.innerHTML = "";
 
-    // update text content in the DOM
-    quote.textContent = newQuote;
-    author.textContent = "- " + newAuthor;
-    details.textContent = newDetails;
+    // creates two divs, one for the text and one for the image
+    const textContainer = document.createElement("div");
+    const imageContainer = document.createElement("div");
 
-    // update the image src and alt attributes
-    let imageSrcAndAltKeys = Object.keys(imageSrcAndAlt); 
-    image.setAttribute("src", imageSrcAndAltKeys[randomIndex]);
-    image.setAttribute("alt", imageSrcAndAlt[imageSrcAndAltKeys[randomIndex]]);
+    // creates and appends the elements 
+    quote = document.createElement("q");
+    quote.id = "tip-of-the-day-quote";
+    quote.tabIndex = 2;
 
-    // update the source reference text and URL
-    let imageReferencesKeys = Object.keys(imageReferences);
-    imageReference.textContent = imageReferencesKeys[randomIndex];
-    imageReference.setAttribute("href", imageReferences[imageReferencesKeys[randomIndex]]);
+    author = document.createElement("p");
+    author.id = "tip-of-the-day-author";
+
+    details = document.createElement("p");
+    details.id = "tip-of-the-day-details";
+    details.tabIndex = 3;
+
+    image = document.createElement("img");
+    image.id = "tip-of-the-day-img";
+
+    textContainer.appendChild(quote);
+    textContainer.appendChild(author);
+    textContainer.appendChild(details);
+    imageContainer.appendChild(image);
+
+    container.appendChild(textContainer);
+    container.appendChild(imageContainer);
+  }
+
+  // get all quote keys (tip titles/quotes)
+  const tipsKeys = Object.keys(tipsOfTheDayQuotes);
+  let randomIndex = 0;
+  let newQuote = "";
+
+  // pick a new random quote, avoiding repetition of the current one
+  do {
+    randomIndex = Math.floor(Math.random() * tipsKeys.length);
+    newQuote = tipsKeys[randomIndex];
+  } while (newQuote === quote.textContent);
+
+  // get the corresponding author and details
+  const newAuthor = Object.keys(tipsOfTheDayQuotes[newQuote])[0];
+  const newDetails = tipsOfTheDayQuotes[newQuote][newAuthor];
+
+  // update text content in the DOM
+  quote.textContent = newQuote;
+  author.textContent = "- " + newAuthor;
+  details.textContent = newDetails;
+
+  // update the image src and alt attributes
+  const imgKeys = Object.keys(imageSrcAndAlt);
+  const imgSrc = imgKeys[randomIndex];
+  image.setAttribute("src", imgSrc);
+  image.setAttribute("alt", imageSrcAndAlt[imgSrc] || "Tip image");
+
+  // update the source reference text and URL
+  const refKeys = Object.keys(imageReferences);
+  const refText = refKeys[randomIndex];
+  imageReference.textContent = refText;
+  imageReference.setAttribute("href", imageReferences[refText]);
 }
 
 // waits until DOM is ready before manipulating elements
