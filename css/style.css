@@ -319,6 +319,7 @@ input, textarea {
   grid-template-columns: 1fr 1fr;
   max-width: 60rem;
   margin: 2rem 0;
+  gap: 2rem;
 }
 
 #tip-of-the-day-img {
